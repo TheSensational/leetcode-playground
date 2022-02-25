@@ -1,5 +1,4 @@
 const isValid = s => {
-  if (s.length === 1) return false;
   const stack = [];
   for (let i = 0; i < s.length; i++) {
     if (['{', '[', '('].includes(s[i])) {
