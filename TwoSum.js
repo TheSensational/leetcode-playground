@@ -3,10 +3,10 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function (nums, target) {
+const twoSum = (nums, target) => {
   let hash = {};
   for (let i = 0; i < nums.length; i++) {
-    if (hash[target - nums[i]] !== undefined) {
+    if (hash[target - nums[i]]) {
       return [i, hash[target - nums[i]]];
     }
     hash[nums[i]] = i;
