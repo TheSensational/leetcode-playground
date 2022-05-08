@@ -1,7 +1,7 @@
 const countBinarySubstrings = (s) => {
   let ptr = 0,
     len = s.length,
-    cur = 0,
+    last = 0,
     ans = 0;
   while (ptr < len) {
     let count = 0;
@@ -10,8 +10,8 @@ const countBinarySubstrings = (s) => {
       ptr++;
       count++;
     }
-    ans += Math.min(count, cur);
-    cur = count;
+    ans += Math.min(count, last);
+    last = count;
   }
   return ans;
 };
