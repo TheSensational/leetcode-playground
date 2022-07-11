@@ -1,4 +1,4 @@
-var binaryTreePaths = function (root) {
+const binaryTreePaths = (root) => {
   const ans = [];
   const dfs = (node, cur) => {
     if (!node) return;

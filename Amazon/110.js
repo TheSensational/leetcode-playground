@@ -1,4 +1,4 @@
-var isBalanced = function (root) {
+const isBalanced = (root) => {
   const dfs = (node) => {
     if (!node) return 0;
     let left = 1 + dfs(node.left);
