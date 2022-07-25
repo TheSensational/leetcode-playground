@@ -3,10 +3,10 @@ const allPossibleFBT = (number) => {
     return [];
   }
 
-  let memo = new Array(number + 1).fill(null).map((i) => []);
+  let memo = new Array(number + 1);
 
   let helper = (n) => {
-    if (memo[n].length > 0) {
+    if (memo[n]) {
       return memo[n];
     }
 
@@ -16,7 +16,7 @@ const allPossibleFBT = (number) => {
 
     const trees = [];
 
-    for (let i = 1; i < n - 1; i += 2) {
+    for (let i = 1; i < n; i += 2) {
       let lt = helper(i);
       let rt = helper(n - 1 - i);
 
@@ -28,7 +28,7 @@ const allPossibleFBT = (number) => {
     }
 
     memo[n] = trees;
-    return memo[n];
+    return trees;
   };
 
   return helper(number);
