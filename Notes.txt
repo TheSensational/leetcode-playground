@@ -1,5 +1,0 @@
-Flex box container:
-  justify-content, align-items, gap
-Flex box children:
-  align-self, order
-  flex: 0 0 auto; (grow shrink basis)
