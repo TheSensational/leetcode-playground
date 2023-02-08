@@ -1,4 +1,4 @@
-var deleteDuplicates = function (head) {
+let deleteDuplicates = (head) => {
   let start = head;
   let set = new Set();
   let prev;
